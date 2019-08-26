@@ -30,7 +30,7 @@ public class TSSTestFt
 			thNum = Integer.parseInt(args[0]);
 		System.out.println("Starting test with " + thNum + " threads");
 		List<Future<Long>> runs = new ArrayList<Future<Long>>(thNum);
-		int iters = 50;
+		int iters = 200;
 		int periodSec = 2;
 		for (int i = 0; i < iters; i++)
 		{
@@ -86,7 +86,8 @@ public class TSSTestFt
 				}
 				catch (Exception e)
 				{
-					System.err.println("Completable future interrupted or failed");
+					System.err
+					.println("Completable future interrupted or failed");
 				}
 				return -1L;
 			});

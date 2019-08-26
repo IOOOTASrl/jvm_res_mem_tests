@@ -4,4 +4,16 @@
   <artifactId>com.iooota.tests.tss</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Thread Stack Size test</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.iooota</groupId>
+  		<artifactId>com.iooota.util</artifactId>
+  		<version>1.0.0-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+			<groupId>org.ops4j.pax.logging</groupId>
+			<artifactId>pax-logging-api</artifactId>
+			<version>1.10.1</version>
+		</dependency>
+  </dependencies>
 </project>

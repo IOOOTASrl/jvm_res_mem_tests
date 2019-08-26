@@ -65,7 +65,7 @@ public class TSSTestCf
 		runs.clear();
 		for (int i = 0; i < thNum; i++)
 		{
-			runs.add(CompletableFuture.supplyAsync(() ->
+			CompletableFuture<Long> asyncSuppl = CompletableFuture.supplyAsync(() ->
 			{
 				try
 				{
@@ -78,7 +78,8 @@ public class TSSTestCf
 					System.err.println("Completable future interrupted or failed");
 				}
 				return -1L;
-			}));
+			});
+			runs.add(asyncSuppl);
 		}
 	}
 
